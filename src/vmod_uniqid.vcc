@@ -1,0 +1,6 @@
+$Module uniqid 3 "Unique ID"
+$ABI vrt
+$Event event_function
+
+$Function STRING get(STRING)
+Return string presentation of uint128 hash for string input
