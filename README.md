@@ -60,6 +60,11 @@ sub vcl_deliver {
 }
 ```
 
+Add the custom header to logs for postmortem lookup.
+```
+varnishncsa -a -F 'reqid:%{x-req-uuid}i> %U %s'
+```
+
 ## Example
 Each request, for the same asset, generates a unique ID.
 ```sh
